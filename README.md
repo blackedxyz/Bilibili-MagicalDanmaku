@@ -302,13 +302,13 @@ QQ群：**427436529**，欢迎交流反馈与研究新功能~
 
 ### 通用WebSocket
 
-可以连接至任意 WebSocket！
+可以连接至**任意 WebSocket**！
 
 此时连接的 URL 相当于房间号（包含前缀 `ws://` 或 `wss://`）。
 
 收到消息时，会直接触发“WS_MSG”事件。消息原本内容使用 `%text%` 来读取，如果可以解析为 JSON 格式，那么可以通过本程序脚本中 JSON 的方式读取其中的一些字段，例如 `%.data.nickname%`。
 
-通过 WebSocket 相关的命令来发送消息
+通过 WebSocket 相关的命令来发送消息。
 
 
 
@@ -827,7 +827,8 @@ border-image: url(C:/Path/To/Image.png)
 | up_uname         | 主播名字                      |                                                              |
 | my_uid           | 机器人ID                      |                                                              |
 | my_uname         | 机器人名字                    |                                                              |
-| csrf             | csrf                          | 用户的csrf token                                             |
+| csrf             |                               | 用户的 csrf_token                                            |
+| cookie           |                               | 用户的 Cookie，可以在扩展程序中的官方接口中使用              |
 | level            | 用户等级                      | 进入直播间没有level                                          |
 | text             | 弹幕消息                      | 若有换行，则替换为 `%n%`                                     |
 | url_text         | URL编码的弹幕消息             | 针对弹幕消息进行URL编码，用于网址传参，避免一些特殊文本      |

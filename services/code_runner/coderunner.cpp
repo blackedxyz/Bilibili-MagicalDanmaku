@@ -1611,6 +1611,13 @@ QString CodeRunner::replaceDanmakuVariants(const LiveDanmaku& danmaku, const QSt
     // cookie
     else if (key == "%csrf%")
         return ac->csrf_token;
+    
+    else if (key == "%cookie%")
+    {
+        QString cookie = ac->browserCookie;
+        cookie.replace("\n", ";");
+        return cookie;
+    }
 
     // 工作状态
     else if (key == "%working%")

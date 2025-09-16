@@ -118,6 +118,12 @@
             "description": "用户的csrf token"
         },
         {
+            "name": "cookie",
+            "zh_name": "cookie",
+            "catalog": "user",
+            "description": "用户的cookie"
+        },
+        {
             "name": "level",
             "zh_name": "用户等级",
             "catalog": "user",

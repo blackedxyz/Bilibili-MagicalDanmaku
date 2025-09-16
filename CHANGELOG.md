@@ -4,6 +4,7 @@
 - 新增开播相关命令：开播：`>startLive()`、下播：`>stopLive()`、设置分区：`>setLiveArea(areaId)`
 - 新增可连接至任意WebSocket类型
 - 新增向直播WebSocket发送消息的命令：`>sendToLiveSocket(data)`
+- 新增获取用户Cookie的变量：`%cookie%`
 
 
 
