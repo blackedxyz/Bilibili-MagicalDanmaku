@@ -64,7 +64,7 @@
 font-weight: 700;</string>
          </property>
          <property name="text">
-          <string>神奇弹幕捐赠版</string>
+          <string>神奇弹幕开发版</string>
          </property>
         </widget>
        </item>
@@ -449,8 +449,7 @@ VIP绑定当前直播间、登录账号
 font-weight: 500px;</string>
              </property>
              <property name="text">
-              <string>单直播间
-绑定账号</string>
+              <string>单账号</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -601,8 +600,7 @@ VIP绑定当前直播间
 font-weight: 500px;</string>
              </property>
              <property name="text">
-              <string>单直播间
-多机器人</string>
+              <string>单房间</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -754,8 +752,8 @@ VIP绑定当前登录的账号
 font-weight: 500px;</string>
              </property>
              <property name="text">
-              <string>单机器人
-多直播间</string>
+              <string>单账号
+不限</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -944,22 +942,22 @@ margin: 20px</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="roomIdLabel">
-         <property name="styleSheet">
-          <string notr="true">color: gray;</string>
-         </property>
-         <property name="text">
-          <string>直播间号</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="robotIdLabel">
          <property name="styleSheet">
           <string notr="true">color: gray;</string>
          </property>
          <property name="text">
-          <string>机器人号</string>
+          <string>账号</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="roomIdLabel">
+         <property name="styleSheet">
+          <string notr="true">color: gray;</string>
+         </property>
+         <property name="text">
+          <string>房号</string>
          </property>
         </widget>
        </item>

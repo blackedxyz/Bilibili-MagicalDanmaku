@@ -78,6 +78,9 @@ BuyVIPDialog::BuyVIPDialog(QString dataPath, QString roomId, QString upId, QStri
         "未来更多扩展功能",
     };
 
+    funcs.clear();
+    funcs.append("任意可编程操作");
+
     ui->scrollArea->clearWidgets();
     foreach (QString f, funcs)
     {
@@ -369,7 +372,7 @@ void BuyVIPDialog::showEvent(QShowEvent *e)
             ui->typeRoomBgCard->setEnabled(false);
             if (!simulatePressed)
                 btns[2]->simulateStatePress();
-            ui->label_12->setText("单设备\n多直播间");
+            ui->label_12->setText("单设备\n多房间");
             break;
         }
         default:

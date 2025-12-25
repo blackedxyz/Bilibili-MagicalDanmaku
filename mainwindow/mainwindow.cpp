@@ -652,7 +652,7 @@ void MainWindow::initObject()
 
     us = new UserSettings(rt->dataPath + "settings.ini");
 
-    rt->livePlatform = (LivePlatform)(us->value("global/live_platform", 0).toInt());
+    rt->livePlatform = (LivePlatform)(us->value("global/live_platform", 101).toInt());
     // 设备
     {
         rt->CPU_ID = CPUIDUtil::get_cpuId();
@@ -12221,27 +12221,27 @@ void MainWindow::on_platformButton_clicked()
     };
 
     newFacileMenu;
-    menu->addAction(QIcon(":/icons/platform/bilibili"), "哔哩哔哩", [=]{
-        switchToPlatform(Bilibili);
-    })->check(rt->livePlatform == Bilibili);
-    menu->split();
-    menu->addAction(QIcon(":/icons/platform/douyin"), "抖音", [=]{
-        switchToPlatform(Douyin);
-    })->check(rt->livePlatform == Douyin);
-    menu->addAction(QIcon(":/icons/platform/keyu"), "可遇（TikTok/抖音/快手/视频号/虎牙）", [=]{
-        switchToPlatform(Keyu);
-    })->check(rt->livePlatform == Keyu);
     menu->addAction(QIcon(":/icons/platform/websocket"), "通用WebSocket", [=]{
         switchToPlatform(AnyWS);
     })->check(rt->livePlatform == AnyWS);
+    menu->addAction(QIcon(":/icons/platform/bilibili"), "哔哩哔哩", [=]{
+        switchToPlatform(Bilibili);
+    })->check(rt->livePlatform == Bilibili)->hide();
+    menu->split();
+    menu->addAction(QIcon(":/icons/platform/douyin"), "抖音", [=]{
+        switchToPlatform(Douyin);
+    })->check(rt->livePlatform == Douyin)->hide();
+    menu->addAction(QIcon(":/icons/platform/keyu"), "可遇（TikTok/抖音/快手/视频号/虎牙）", [=]{
+        switchToPlatform(Keyu);
+    })->check(rt->livePlatform == Keyu);
     menu->split()->addAction(QIcon(":/icons/platform/huya"), "虎牙", [=]{
         switchToPlatform(Huya);
-    })->check(rt->livePlatform == Huya)->disable();
+    })->check(rt->livePlatform == Huya)->disable()->hide();
     menu->addAction(QIcon(":/icons/platform/douyu"), "斗鱼", [=]{
         switchToPlatform(Douyu);
-    })->check(rt->livePlatform == Douyu)->disable();
+    })->check(rt->livePlatform == Douyu)->disable()->hide();
     menu->addAction(QIcon(":/icons/platform/kuaishou"), "快手", [=]{
         switchToPlatform(Kuaishou);
-    })->check(rt->livePlatform == Kuaishou)->disable();
+    })->check(rt->livePlatform == Kuaishou)->disable()->hide();
     menu->exec();
 }

@@ -987,7 +987,7 @@ private:
     int permissionLevel = 0;
     bool permissionType[20] = {};
     QTimer* permissionTimer = nullptr;
-    QString permissionText = "捐赠版";
+    QString permissionText = "开发版";
     qint64 permissionDeadline = 0;
 
     // 录播
